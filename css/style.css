@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --dark-violet: hsl(257, 40%, 39%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --dark-magenta: hsl(322, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --poppins: "Poppins";
+    --open-sans: "Open Sans";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: var(--open-sans), sans-serif;
+}
+
+body {
+    background: url(../images/bg-mobile.svg) var(--violet);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+}
+
+.top-content img:first-child {
+    width: 30%;
+    height: auto;
+}
+
+.top-content img:last-child {
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+}
+
+.middle-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+    color: var(--white);
+    text-align: center;
+}
+
+.middle-content h1 {
+    font-family: var(--poppins), sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.middle-content p {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 28px;
+}
+
+.middle-content button {
+    box-shadow: 0px 0px 5px 5px var(--dark-violet);
+    color: var(--violet);
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    padding: 15px;
+    width: 200px;
+    max-width: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.middle-content button:hover {
+    background-color: var(--soft-magenta);
+    color: var(--white);
+}
+
+.icons-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 70px;
+}
+
+.icons-content .fab {
+    font-size: 1em;
+    padding: 10px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.icons-content .fab:hover {
+    color: var(--dark-magenta);
+    border: 1px solid var(--dark-magenta);
+}
+
+.icons-content .fa-facebook-f {
+    padding-left: 15px;
+}
+
+/* tablet, landscape iPad, lo-res laptops and desktops */
+@media (min-width: 720px) {
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 50px;
+    }
+
+    .top-content img:first-child {
+        margin-top: 70px;
+    }
+
+    .top-content img:last-child {
+        height: 68%;
+        width: 118%;
+        margin-top: 50px;
+    }
+
+    .middle-content {
+        padding: 230px 150px 0 150px;
+        text-align: left;
+    }
+
+    .middle-content h1 {
+        font-size: 30px;
+    }
+
+    .middle-content p {
+        width: 125%;
+        font-size: 15px;
+        margin-left: auto;
+    }
+
+    .middle-content button {
+        width: 160px;
+        margin-right: auto;
+    }
+
+    .icons-content {
+        margin-top: 200px;
+        margin-left: 110%;
+    }
+}
